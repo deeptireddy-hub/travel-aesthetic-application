@@ -651,24 +651,17 @@ The goal is to create a travel application that feels less like a conventional b
 
 # 📸 Screenshots
 
-> Add screenshots of your application here to make the GitHub repository more attractive to recruiters and evaluators.
-
-Example:
-
-```markdown
-## 📸 Screenshots
-
 ### Home
 
 ![Wanderly Home](screenshots/wanderly-home.png)
 
 ### Destination Explorer
 
-![Destination Explorer](screenshots/explore.png)
+![Destination Explorer](screenshots/explore-page.png)
 
 ### Destination Details
 
-![Destination Details](screenshots/wanderly-destination.png)
+![Destination Details](screenshots/wanderly-destinations.png)
 
 ### AI Travel Concierge
 
@@ -677,17 +670,16 @@ Example:
 ### Trip Planner
 
 ![Trip Planner](screenshots/trip-planner.png)
-```
 
 Recommended screenshot folder:
 
 ```text
 screenshots/
-├── waaderly-home.png
+├── wanderly-home.png
 ├── wanderly-destinations.png
-├── destination-details.png
-├── chat bot.png
-└── plan-trip.png
+├── explore-page.png
+├── chat-bot.png
+└── trip-planner.png
 ```
 
 ---
