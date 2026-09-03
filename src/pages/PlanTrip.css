@@ -1,0 +1,52 @@
+/* ===================================================
+   PLAN TRIP PAGE STYLES
+   =================================================== */
+
+.plan-trip-page {
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.plan-page-hero {
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--color-border-subtle);
+  text-align: center;
+}
+
+.plan-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.eyebrow-icon {
+  color: var(--color-accent);
+}
+
+.plan-page-title {
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  line-height: 1.12;
+}
+
+.plan-page-subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.plan-page-main {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-24);
+}

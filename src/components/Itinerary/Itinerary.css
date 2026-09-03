@@ -1,0 +1,476 @@
+/* ===================================================
+   ITINERARY & GENERATOR STYLES
+   Bespoke Day-by-Day Timeline UI
+   =================================================== */
+
+/* Generator Form Box */
+.itinerary-generator-box {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-md);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.generator-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.generator-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--color-primary);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.generator-subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.generator-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.label-icon {
+  color: var(--color-accent);
+}
+
+.form-select {
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-surface-subtle);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-primary);
+  outline: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.form-select:focus {
+  border-color: var(--color-primary);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(19, 45, 69, 0.08);
+}
+
+/* Pills Rows */
+.days-pills-row,
+.style-pills-row,
+.interests-pills-row {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.days-pill,
+.style-pill,
+.interest-pill {
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-surface-subtle);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.days-pill:hover,
+.style-pill:hover,
+.interest-pill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.days-pill.active,
+.style-pill.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.interest-pill.selected {
+  background-color: rgba(230, 165, 26, 0.15);
+  border-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.generate-submit-btn {
+  width: 100%;
+  margin-top: var(--space-4);
+  padding: 1rem;
+}
+
+.spinner-inline {
+  animation: spin 1s linear infinite;
+}
+
+.generator-error-box {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ===================================================
+   STRUCTURED ITINERARY DISPLAY STYLES
+   =================================================== */
+
+.itinerary-display-container {
+  max-width: 920px;
+  margin: 0 auto;
+  animation: fadeUp 500ms ease;
+}
+
+.itinerary-editorial-header {
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-10);
+}
+
+.itinerary-badge-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.badge-sparkle {
+  color: var(--color-accent);
+}
+
+.itinerary-display-title {
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  color: var(--color-primary);
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+}
+
+.itinerary-editorial-summary {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto var(--space-6);
+}
+
+.itinerary-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.action-pill {
+  gap: 0.4rem;
+  font-size: var(--text-xs);
+}
+
+.copied-icon {
+  color: #16a34a;
+}
+
+/* Days List & Day Cards */
+.itinerary-days-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.itinerary-day-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.itinerary-day-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Day Accordion Header */
+.day-accordion-header {
+  width: 100%;
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--transition-fast);
+}
+
+.day-accordion-header:hover {
+  background-color: rgba(19, 45, 69, 0.02);
+}
+
+.day-number-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.day-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.day-digit {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.day-header-meta {
+  flex: 1;
+}
+
+.day-theme-title {
+  font-size: var(--text-xl);
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.day-time-summary {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.day-toggle-icon {
+  color: var(--color-text-secondary);
+}
+
+/* Day Content & Timeline */
+.day-content-timeline {
+  padding: 0 var(--space-8) var(--space-8) calc(var(--space-8) + 29px);
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+}
+
+.timeline-milestone {
+  display: flex;
+  gap: var(--space-6);
+  position: relative;
+}
+
+.milestone-icon-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.milestone-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.milestone-icon-wrap.morning {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.milestone-icon-wrap.afternoon {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.milestone-icon-wrap.evening {
+  background-color: #ede9fe;
+  color: #7c3aed;
+}
+
+.timeline-connector {
+  width: 2px;
+  flex: 1;
+  background-color: var(--color-border-subtle);
+  margin-top: 4px;
+}
+
+.milestone-details {
+  flex: 1;
+  padding-bottom: var(--space-4);
+}
+
+.milestone-period {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 2px;
+}
+
+.milestone-title {
+  font-size: var(--text-lg);
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.milestone-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Day Notes Grid */
+.day-notes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  margin-left: 56px;
+}
+
+.day-note-box {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  border-left: 3px solid var(--color-primary);
+}
+
+.day-note-box.food {
+  border-left-color: var(--color-accent);
+}
+
+.note-box-header {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.note-icon.food {
+  color: var(--color-accent);
+}
+
+.note-icon.insight {
+  color: var(--color-primary);
+}
+
+.note-box-text {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Print Stylesheet */
+@media print {
+  .no-print,
+  .navbar-header,
+  .wanderly-footer,
+  .floating-ai-trigger {
+    display: none !important;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .itinerary-day-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .day-accordion-header {
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .day-content-timeline {
+    padding: var(--space-4);
+  }
+
+  .day-notes-grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,253 @@
+/* ===================================================
+   WEATHER COMPONENT STYLES
+   Editorial Atmospheric Weather Card
+   =================================================== */
+
+.weather-card-container {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  padding: var(--space-6) var(--space-8);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  width: 100%;
+  max-width: 480px;
+}
+
+.weather-card-container:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
+}
+
+.weather-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.weather-eyebrow {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.weather-location-name {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.weather-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-subtle);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-dot.live {
+  background-color: #27c93f;
+  box-shadow: 0 0 6px rgba(39, 201, 63, 0.6);
+}
+
+.status-dot.demo {
+  background-color: var(--color-accent);
+}
+
+/* Main Temperature Row */
+.weather-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.weather-temp-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.weather-state-icon {
+  flex-shrink: 0;
+}
+
+.weather-state-icon.sun {
+  color: var(--color-accent);
+}
+
+.weather-state-icon.cloud {
+  color: #697582;
+}
+
+.weather-state-icon.rain {
+  color: #2563eb;
+}
+
+.weather-state-icon.wind {
+  color: #0d9488;
+}
+
+.weather-temp-display {
+  display: flex;
+  align-items: flex-start;
+}
+
+.temp-number {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.temp-unit {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--color-text-secondary);
+  margin-left: 2px;
+}
+
+.weather-condition-group {
+  text-align: right;
+}
+
+.weather-condition-text {
+  display: block;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.weather-sub-desc {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+
+/* Atmospheric Metrics Grid */
+.weather-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  background-color: var(--color-bg);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.weather-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stat-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stat-icon {
+  color: var(--color-accent);
+}
+
+.stat-value {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Skeleton Loading State */
+.skeleton-card {
+  pointer-events: none;
+}
+
+.skeleton-line.title {
+  width: 140px;
+  height: 20px;
+}
+
+.skeleton-pill {
+  width: 70px;
+  height: 20px;
+  border-radius: var(--radius-full);
+}
+
+.skeleton-temp {
+  width: 120px;
+  height: 50px;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-desc {
+  width: 90px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-stat {
+  height: 44px;
+  border-radius: var(--radius-sm);
+}
+
+/* Error State */
+.error-card {
+  border-color: rgba(229, 57, 53, 0.2);
+  background-color: #fffaf9;
+}
+
+.weather-error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-4) 0;
+  gap: var(--space-3);
+}
+
+.weather-error-icon {
+  color: #e53935;
+}
+
+.error-heading {
+  font-size: var(--text-base);
+  color: var(--color-primary);
+  margin-bottom: 2px;
+}
+
+.error-subtext {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.btn-retry {
+  margin-top: var(--space-2);
+  padding: 0.5rem 1rem;
+  font-size: var(--text-xs);
+}

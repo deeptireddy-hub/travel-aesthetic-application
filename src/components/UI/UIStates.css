@@ -1,0 +1,58 @@
+/* ===================================================
+   REUSABLE UI STATES (Loading, Error, Empty)
+   =================================================== */
+
+.ui-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-16) var(--space-6);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.state-spinner {
+  color: var(--color-accent);
+  animation: spin 1.2s linear infinite;
+  margin-bottom: var(--space-4);
+}
+
+.state-icon-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.state-icon-circle.error {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.state-icon-circle.empty {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-accent);
+}
+
+.state-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.state-description {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.state-retry-btn,
+.state-action-btn {
+  margin-top: var(--space-2);
+}

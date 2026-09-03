@@ -1,0 +1,270 @@
+/* ===================================================
+   HOME PAGE SECTION STYLES
+   Editorial Travel Magazine Aesthetic
+   =================================================== */
+
+.home-page {
+  position: relative;
+}
+
+.places-header-desc {
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  max-width: 580px;
+  margin: var(--space-4) auto 0;
+  line-height: 1.7;
+}
+
+/* AI Assistant Intro Section */
+.ai-assistant-intro-section {
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+.ai-intro-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-md);
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.ai-intro-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.ai-intro-heading {
+  font-size: clamp(2rem, 3.2vw, 2.85rem);
+  color: var(--color-primary);
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+}
+
+.ai-intro-desc {
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.ai-suggested-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.ai-bubble {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.6rem 1.1rem;
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  max-width: fit-content;
+}
+
+.ai-bubble:hover {
+  border-color: var(--color-accent);
+  background-color: rgba(230, 165, 26, 0.08);
+  transform: translateX(4px);
+}
+
+.ai-intro-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.ai-open-btn {
+  gap: 0.5rem;
+}
+
+.ai-plan-btn {
+  gap: 0.5rem;
+}
+
+/* Chat Mockup Visual */
+.ai-intro-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.ai-chat-preview-mockup {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mockup-header {
+  background-color: #0c1e30;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mockup-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.mockup-dot.red { background-color: #ff5f56; }
+.mockup-dot.yellow { background-color: #ffbd2e; }
+.mockup-dot.green { background-color: #27c93f; }
+
+.mockup-title {
+  margin-left: var(--space-2);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.mockup-body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.mockup-bubble {
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+}
+
+.mockup-bubble.user {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+  max-width: 85%;
+}
+
+.mockup-bubble.ai {
+  background-color: #1a3a58;
+  color: rgba(255, 255, 255, 0.9);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  max-width: 95%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ai-badge-label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.mockup-bubble.typing {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.dot-typing {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  animation: subtlePulse 1s infinite alternate;
+}
+
+.dot-typing:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot-typing:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Itinerary Teaser Section */
+.itinerary-teaser-section {
+  background-color: #0c2033;
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.itinerary-teaser-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itinerary-teaser-heading {
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  color: var(--color-white);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+  line-height: 1.15;
+}
+
+.itinerary-teaser-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.itinerary-cta-btn {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border: 1px solid var(--color-accent);
+  font-weight: 600;
+  padding: 1rem 2.2rem;
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+}
+
+.itinerary-cta-btn:hover {
+  background-color: #f5b934;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(230, 165, 26, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .ai-intro-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    padding: var(--space-8);
+  }
+
+  .ai-intro-visual {
+    order: -1;
+  }
+}

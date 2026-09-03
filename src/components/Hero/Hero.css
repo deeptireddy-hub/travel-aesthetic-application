@@ -1,0 +1,258 @@
+/* ===================================================
+   HERO COMPONENT STYLES
+   Cinematic Full-Viewport Experience
+   =================================================== */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--color-white);
+  padding-top: var(--navbar-height);
+}
+
+/* Background Video & Scrim */
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.02); /* Avoid edge artifacts */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(19, 45, 69, 0.65) 0%,
+    rgba(19, 45, 69, 0.48) 45%,
+    rgba(19, 45, 69, 0.78) 100%
+  );
+  pointer-events: none;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2rem;
+}
+
+.hero-eyebrow {
+  color: #F3CA68;
+  letter-spacing: 0.25em;
+  margin-bottom: var(--space-4);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-heading {
+  color: var(--color-white);
+  font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+  line-height: 1.08;
+  font-weight: 500;
+  margin-bottom: var(--space-6);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-heading-accent {
+  color: #F8F5E9;
+  font-style: italic;
+  font-weight: 400;
+  border-bottom: 2px solid rgba(230, 165, 26, 0.6);
+  padding-bottom: 2px;
+}
+
+.hero-subheading {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 620px;
+  margin-bottom: var(--space-8);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Bar */
+.hero-search-form {
+  width: 100%;
+  max-width: 640px;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  padding: 0.45rem 0.5rem 0.45rem 1.4rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-normal);
+}
+
+.hero-search-form:focus-within {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 0 0 2px var(--color-accent);
+  background-color: #FFFFFF;
+}
+
+.hero-search-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.hero-search-icon {
+  color: var(--color-primary);
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+
+.hero-search-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-primary);
+  outline: none;
+}
+
+.hero-search-input::placeholder {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.hero-search-btn {
+  padding: 0.85rem 1.8rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+/* Feature Badges */
+.hero-badges {
+  margin-top: var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 500;
+}
+
+.hero-badge .badge-icon {
+  color: var(--color-accent);
+}
+
+.hero-badge-separator {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.7rem;
+}
+
+/* Scroll To Explore Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.hero-scroll-indicator:hover {
+  color: var(--color-white);
+}
+
+.scroll-text {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.scroll-icon-wrapper {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scrollBounce 2.4s infinite ease-in-out;
+}
+
+.scroll-arrow {
+  color: var(--color-accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+
+  .hero-search-form {
+    flex-direction: column;
+    padding: 0.8rem;
+    border-radius: var(--radius-xl);
+  }
+
+  .hero-search-input-wrapper {
+    width: 100%;
+    padding: 0.4rem 0.2rem;
+  }
+
+  .hero-search-btn {
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+
+  .hero-badge-separator {
+    display: none;
+  }
+
+  .hero-badges {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}

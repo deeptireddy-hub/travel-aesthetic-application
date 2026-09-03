@@ -1,0 +1,46 @@
+/* ===================================================
+   DESTINATIONS PAGE STYLES
+   =================================================== */
+
+.destinations-page {
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.destinations-page-hero {
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--color-border-subtle);
+  background-color: #FFFFFF;
+}
+
+.destinations-page-title {
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  line-height: 1.12;
+}
+
+.destinations-page-lead {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+.destinations-main-content {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-20);
+}
+
+.results-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -1rem;
+  margin-bottom: var(--space-6);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

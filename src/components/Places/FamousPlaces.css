@@ -1,0 +1,204 @@
+/* ===================================================
+   FAMOUS PLACES COMPONENT STYLES
+   Horizontal Editorial Place Cards
+   =================================================== */
+
+.famous-places-section {
+  background-color: #FFFFFF;
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.places-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-12);
+}
+
+.places-subheading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-top: var(--space-2);
+}
+
+.famous-places-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* Horizontal Place Card */
+.famous-place-card {
+  display: flex;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.famous-place-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
+}
+
+/* Image Wrapper */
+.place-image-wrapper {
+  position: relative;
+  width: 38%;
+  min-height: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: var(--color-surface-subtle);
+}
+
+.place-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1), opacity 400ms ease;
+  opacity: 0;
+}
+
+.place-image.loaded {
+  opacity: 1;
+}
+
+.famous-place-card:hover .place-image {
+  transform: scale(1.06);
+}
+
+.place-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Favorite Button */
+.place-favorite-btn {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 2;
+}
+
+.place-favorite-btn:hover {
+  background-color: #FFFFFF;
+  color: #e53935;
+  transform: scale(1.1);
+}
+
+.place-favorite-btn.favorited {
+  color: #e53935;
+  background-color: #FFFFFF;
+}
+
+/* Content Area */
+.place-content {
+  flex: 1;
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.place-header {
+  margin-bottom: var(--space-3);
+}
+
+.place-location-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.place-location-tag .pin-icon {
+  color: var(--color-accent);
+}
+
+.place-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.place-description {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+/* Best Time To Visit */
+.place-best-time {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background-color: var(--color-bg);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-accent);
+  font-size: var(--text-xs);
+}
+
+.place-best-time .clock-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.best-time-label {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-right: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.best-time-text {
+  color: var(--color-text-secondary);
+}
+
+/* Responsive Stacking */
+@media (max-width: 768px) {
+  .famous-place-card {
+    flex-direction: column;
+  }
+
+  .place-image-wrapper {
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .place-content {
+    padding: var(--space-6);
+  }
+}
