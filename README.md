@@ -76,6 +76,89 @@ VITE_UNSPLASH_ACCESS_KEY=your_unsplash_access_key
 
 ---
 
+## 🚀 Folder Structure
+travel-aesthetic-application/
+├── .env
+├── .env.example
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── README.md
+├── public/
+│   ├── favicon.svg
+│   └── videos/
+│       └── travel-hero.mp4
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── components/
+│   │   ├── AI/
+│   │   │   ├── AIChat.css
+│   │   │   ├── AIChat.jsx
+│   │   │   └── ChatMessage.jsx
+│   │   ├── Destination/
+│   │   │   ├── Destination.css
+│   │   │   ├── DestinationCard.jsx
+│   │   │   ├── DestinationGrid.jsx
+│   │   │   └── DestinationSearch.jsx
+│   │   ├── Footer/
+│   │   │   ├── Footer.css
+│   │   │   └── Footer.jsx
+│   │   ├── Hero/
+│   │   │   ├── Hero.css
+│   │   │   └── Hero.jsx
+│   │   ├── Itinerary/
+│   │   │   ├── Itinerary.css
+│   │   │   ├── Itinerary.jsx
+│   │   │   ├── ItineraryDay.jsx
+│   │   │   └── ItineraryGenerator.jsx
+│   │   ├── Location/
+│   │   │   ├── LocationPicker.css
+│   │   │   └── LocationPicker.jsx
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.css
+│   │   │   └── Navbar.jsx
+│   │   ├── Places/
+│   │   │   ├── FamousPlace.jsx
+│   │   │   └── FamousPlaces.css
+│   │   ├── UI/
+│   │   │   ├── EmptyState.jsx
+│   │   │   ├── ErrorState.jsx
+│   │   │   ├── LoadingState.jsx
+│   │   │   └── UIStates.css
+│   │   └── Weather/
+│   │       ├── Weather.css
+│   │       └── WeatherCard.jsx
+│   ├── data/
+│   │   └── destinations.js
+│   ├── hooks/
+│   │   ├── useDestinations.js
+│   │   ├── useLocation.js
+│   │   └── useWeather.js
+│   ├── pages/
+│   │   ├── DestinationDetails.css
+│   │   ├── DestinationDetails.jsx
+│   │   ├── Destinations.css
+│   │   ├── Destinations.jsx
+│   │   ├── Home.css
+│   │   ├── Home.jsx
+│   │   ├── PlanTrip.css
+│   │   └── PlanTrip.jsx
+│   ├── services/
+│   │   ├── geminiService.js
+│   │   ├── imageService.js
+│   │   └── weatherService.js
+│   ├── styles/
+│   │   ├── animations.css
+│   │   ├── global.css
+│   │   └── variables.css
+│   └── utils/
+│       ├── formatWeather.js
+│       └── itineraryParser.js
+└── dist/
+
 ## 🚀 Getting Started
 
 ### 1. Installation
@@ -126,9 +209,9 @@ npm run preview
 
 The application is structured for instant zero-configuration deployment to **Vercel** or **Netlify**:
 
-### Deploy to Vercel:
+### Deploy to Netlify:
 1. Push this repository to GitHub.
-2. Import project into [Vercel](https://vercel.com).
+2. Import project into [Netlify](https://www.netlify.com).
 3. Set Framework Preset to **Vite**.
 4. Configure optional Environment Variables (`VITE_OPENWEATHER_API_KEY`, `VITE_GEMINI_API_KEY`).
 5. Click **Deploy**.
