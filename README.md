@@ -463,7 +463,7 @@ Make sure `.env` is included in `.gitignore`.
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/deepti-reddy-hub/travel-aesthetic-application.git
+git clone https://github.com/deeptireddy-hub/travel-aesthetic-application.git
 ```
 
 ## 2. Navigate to the Project
